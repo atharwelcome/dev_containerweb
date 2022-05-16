@@ -7,10 +7,10 @@ RUN yum update -y
 RUN yum install -y httpd \
  zip \
  unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page272/infinite-loop.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page278/careo.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip infinite-loop.zip
-RUN cp -rvf 2117_infinite_loop/* .
-RUN rm -rf 2117_infinite_loop infinite-loop.zip
+RUN unzip careo.zip
+RUN cp -rvf careo/* .
+RUN rm -rf careo careo.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
