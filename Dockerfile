@@ -7,10 +7,10 @@ RUN yum update -y
 RUN yum install -y httpd \
  zip \
  unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page278/buzzed.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page270/veggie.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip buzzed.zip
-RUN cp -rvf buzzed-html-template/* .
-RUN rm -rf buzzed-html-template buzzed.zip
+RUN unzip veggie.zip
+RUN cp -rvf veggie-master/* .
+RUN rm -rf veggie-master veggie.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
